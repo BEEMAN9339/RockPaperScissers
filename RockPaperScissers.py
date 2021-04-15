@@ -1,38 +1,43 @@
-import time
-import random
+"""
+File: RockPaperScissers.py
+Description: ----
+"""
+
+import time, random
+
+weaponz = ["Rock", "Paper", "Scissors"]
+
+objects = {"R":"Rock", "P":"Paper", "S":"Scissors"}
+
 #just an introduction, and choosing a robot name
+
 print("ROCK-PAPER-SCISSORS")
-Name = input('What is your name?\n')
+
+name = input('What is your name?\n')
+
 robotnamez = ["El Robo", "See3-po", "ↄ0{mpu}TER"]
 robotname = random.choice(robotnamez)
-print('{} vs. {}'.format(Name, robotname))
+
+print('{} vs. {}'.format(name, robotname))
+
 time.sleep(2)
+
 #The computer picks a random weapon, and we ask the person which item they will use
 print("Let's play!")
 
-cweaponzz = ["Rock", "Paper", "Scissors"]
-cweapon = (random.choice(cweaponzz))
-
+cweapon = random.choice(weaponz)
 
 #person selecting their object
-def Pick():
-    pweapon = input(" Rock, Paper or Scissors? R or P or S\n")
+def pick():
     while True:
-        if pweapon.upper() == "R":
-            print("You say: Rock")
-            return True
-        elif pweapon.upper() == "P":
-            print("You say: Paper")
-            return True
-        elif pweapon.upper() == "S":
-            print("You say: Scissors")
-            return True
-        else:
-          print("Please put R, P, or S")
-          Pick()
-          return False
+       pweapon = input(" Rock, Paper or Scissors? R or P or S\n").upper()
+       if pweapon in ("R", "P", "S"):
+           print("You say: " + objects[pweapon])
+           return pweapon
+       else:
+           print("Please put R, P, or S")
 
-Pick()
+pweapon = pick()
 #calculating the result
 print("computer says: %s" % (cweapon))
 time.sleep(1)
@@ -41,7 +46,7 @@ if pweapon == "R" and cweapon == "Rock":
 if pweapon == "R" and cweapon == "Paper":
     print("Paper beats rock! %s wins!" % robotname)
 if pweapon == "R" and cweapon == "Scissors":
-    print("Rock beats Scissors! %s wins!" % Name)
+    print("Rock beats Scissors! %s wins!" % name)
 
 if pweapon == "P" and cweapon == "Rock":
     print("Paper suffocates rock! You are the winner!")
@@ -63,7 +68,7 @@ if pweapon == "r" and cweapon == "Rock":
 if pweapon == "r" and cweapon == "Paper":
     print("Paper beats rock! %s wins!" % robotname)
 if pweapon == "r" and cweapon == "Scissors":
-    print("Rock beats Scissors! %s wins!" % Name)
+    print("Rock beats Scissors! %s wins!" % name)
 
 if pweapon == "p" and cweapon == "Rock":
     print("Paper suffocates rock! You are the winner!")
