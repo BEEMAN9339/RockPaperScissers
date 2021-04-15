@@ -3,7 +3,7 @@ import random
 #just an introduction, and choosing a robot name
 print("ROCK-PAPER-SCISSORS")
 Name = input('What is your name?\n')
-robotnamez = ["El Robo", "See3-po", "ↄ0{mpu}TER"]
+robotnamez = ["El Robo", "C3-PO", "ↄ0{mpu}TER", "AI", "Google", "Alexa","Code", "Admin", "Tech", "Codec" ,"Ghost", "The FBI agent in controll of your computer", "Hacker001", "Expert"]
 robotname = random.choice(robotnamez)
 print('{} vs. {}'.format(Name, robotname))
 time.sleep(2)
