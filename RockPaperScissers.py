@@ -9,13 +9,14 @@ print('{} vs. {}'.format(Name, robotname))
 time.sleep(2)
 #The computer picks a random weapon, and we ask the person which item they will use
 print("Let's play!")
-pweapon = input(" Rock, Paper or Scissors? R or P or S\n")
+
 cweaponzz = ["Rock", "Paper", "Scissors"]
 cweapon = (random.choice(cweaponzz))
 
 
 #person selecting their object
 def Pick():
+    pweapon = input(" Rock, Paper or Scissors? R or P or S\n")
     while True:
         if pweapon.upper() == "R":
             print("You say: Rock")
